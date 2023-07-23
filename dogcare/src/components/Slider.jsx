@@ -6,17 +6,14 @@ const Slider = () => {
 
   const onNext = () => {
     setActive((prev) => {
-      return prev === slidelst.length - 1 ? 0 : prev + 1;
+      return prev === slidelst.length - 1 ? prev : prev + 1;
     });
-
-    console.log(active, slidelst.length);
   };
 
   const onPrev = () => {
     setActive((prev) => {
-      return prev === 0 ? slidelst.length - 1 : prev - 1;
+      return prev === 0 ? prev : prev - 1;
     });
-    console.log(active, slidelst.length);
   };
   return (
     <div className="slider">
@@ -52,7 +49,7 @@ const Slider = () => {
       <div
         onClick={onNext}
         className={
-          active === slidelst.length
+          active === slidelst.length - 1
             ? "slider-icon right cursor-default"
             : "slider-icon right active cursor-pointer"
         }
