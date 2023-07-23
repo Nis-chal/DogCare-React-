@@ -8,19 +8,18 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import React from "react";
 import { ImCross } from "react-icons/im";
 const Navbar = () => {
-  const [dropdown, setDropDowm] = React.useState(true);
+  const [dropdown, setDropDowm] = React.useState(false);
   const [showSearch, setSearch] = React.useState(false);
   const [tab, setTab] = React.useState(1);
 
   const toggleDoprDown = () => {
     setDropDowm((prev) => !prev);
-    console.log(dropdown);
   };
   const toggleSearch = () => {
     setSearch((prev) => !prev);
   };
   return (
-    <nav className="relative lg:static">
+    <nav className="relative lg:static min-h-[10vh]">
       <div
         className={
           showSearch
@@ -44,8 +43,8 @@ const Navbar = () => {
               onClick={() => setTab(item.id)}
               className={
                 item.id === tab
-                  ? "nav-item active py-3 lg:py-0 hover:text-[#007fff] lg:hover:bg-transparent hover:bg-[#f5fafa] "
-                  : "nav-item  py-3 lg:py-0 hover:text-[#007fff] hover:bg-[#f5fafa]"
+                  ? "nav-item active py-3 lg:py-0 hover:text-[#007fff]  hover:lg:bg-transparent hover:bg-[#f5fafa] "
+                  : "nav-item  py-3 lg:py-0 hover:text-[#007fff] hover:bg-[#f5fafa]  hover:lg:bg-transparent"
               }
               key={item.id}
             >
