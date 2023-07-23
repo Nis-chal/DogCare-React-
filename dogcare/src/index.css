@@ -1,0 +1,27 @@
+@config "../tailwindcss-config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav {
+  display: flex;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 2;
+}
+
+
