@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { Navbar } from "./components";
+import { Navbar, Slider } from "./components";
 function App() {
-
-
   return (
     <>
-      <div className="container">
+      <div className="">
         <Navbar />
       </div>
+
+      <section id="one">
+        <Slider />
+      </section>
     </>
   );
 }
