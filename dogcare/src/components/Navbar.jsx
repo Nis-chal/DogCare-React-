@@ -16,7 +16,8 @@ const Navbar = () => {
     setDropDowm((prev) => !prev);
   };
   const toggleSearch = () => {
-    setSearch((prev) => !prev);
+    
+    if (window.innerWidth < 1024) setSearch((prev) => !prev);
   };
   return (
     <nav className="relative lg:static min-h-[10vh]">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navbar, Slider } from "./components";
+import { Navbar, Slider, Footer } from "./components";
 function App() {
   return (
     <>
@@ -12,6 +12,10 @@ function App() {
 
       <section id="one">
         <Slider />
+      </section>
+
+      <section id="footer">
+        <Footer />
       </section>
     </>
   );
