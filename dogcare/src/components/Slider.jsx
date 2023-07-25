@@ -29,10 +29,12 @@ const Slider = () => {
       ))}
 
       <div className="slider-info">
-        <h1 className="slider-title">
+        <h1 className="slider-title heading-color Nunito-font font-[900] text-[30px] lg:text-[40px] ">
           We provide the best care to our furry friends!
         </h1>
-        <h5 className="slider-subtitle">Top Quality of Pet Product Store.</h5>
+        <h5 className="slider-subtitle Nunito-font font-[600]">
+          Top Quality of Pet Product Store.
+        </h5>
       </div>
 
       <div

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Nunito:wght@400;500;600;700;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,6 +19,18 @@
   --blue-1000: #17224d;
   --dark-500: #292929;
   --dark-100: #515151;
+}
+
+.Nunito-font {
+  font-family: "Nunito", sans-serif;
+}
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+}
+
+.heading-color {
+  color: #17224d;
 }
 
 img {
@@ -46,6 +59,10 @@ nav {
   justify-content: space-between;
 }
 
+.box{
+  padding-inline: 5%;
+
+}
 
 .nav-links {
   display: flex;
@@ -146,11 +163,6 @@ input:focus {
   width: 100%;
   justify-content: center;
   text-align: center;
-}
-
-.slider-title {
-  font-size: 40px;
-  font-weight: 700;
 }
 
 .slider-subtitle {

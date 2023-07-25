@@ -16,7 +16,6 @@ const Navbar = () => {
     setDropDowm((prev) => !prev);
   };
   const toggleSearch = () => {
-    
     if (window.innerWidth < 1024) setSearch((prev) => !prev);
   };
   return (
@@ -24,12 +23,12 @@ const Navbar = () => {
       <div
         className={
           showSearch
-            ? "hidden lg:flex lg:items-center lg:gap-[2%]   lg:font-[600] lg:text-[30px]"
-            : "nav-heading"
+            ? "hidden lg:flex lg:items-center lg:gap-[2%]   lg:font-[600] lg:text-[30px] cursor-pointer  group "
+            : "nav-heading cursor-pointer group"
         }
       >
-        <FaPaw />
-        <h1 className=" whitespace-nowrap">Dog Care</h1>
+        <FaPaw className="font-bold paw-icon group-hover:text-[var(--blue-500)]" />
+        <h1 className=" whitespace-nowrap Nunito-font font-bold ">Dog Care</h1>
       </div>
       <div
         className={
@@ -44,7 +43,7 @@ const Navbar = () => {
               onClick={() => setTab(item.id)}
               className={
                 item.id === tab
-                  ? "nav-item active py-3 lg:py-0 hover:text-[#007fff]  hover:lg:bg-transparent hover:bg-[#f5fafa] "
+                  ? "nav-item active py-3  lg:py-0 hover:text-[#007fff]  hover:lg:bg-transparent hover:bg-[#f5fafa] "
                   : "nav-item  py-3 lg:py-0 hover:text-[#007fff] hover:bg-[#f5fafa]  hover:lg:bg-transparent"
               }
               key={item.id}
@@ -71,7 +70,7 @@ const Navbar = () => {
         </div>
         <div className=" nav-options ">
           <AiFillHeart className="heart-icon" />
-          <div className="nav-cart relative flex flex-row items-center   xl:pr-[22.15625px] xl:pt-[16px] xl:pb-[17px] xl:pl-[22px]lg:rounded-[8px]  xl:border-[1px] xl:border-[#007fff] xl:border-solid xl:gap-[11.421875px] xl:rounded-[8px]">
+          <div className="nav-cart relative flex flex-row items-center   xl:pr-[22.15625px] xl:pt-[16px] xl:pb-[17px] xl:pl-[22px] lg:rounded-[8px]  xl:border-[1px] xl:border-[#007fff] xl:border-solid xl:gap-[11.421875px] xl:rounded-[8px]">
             <HiShoppingCart className="icon" />
             <span className=" xl:after:content-['items'] xl:after:ms-2 xl:static xl:text-[1rem] xl:w-min xl:h-min xl:bg-transparent xl:top-0 absolute top-[-15px] right-[-2px] text-[9px] h-[15px] w-[15px] bg-red-500 flex flex-row items-center justify-center rounded-[50px] text-white xl:text-black  xl:translate-y-0 ">
               2
