@@ -5,13 +5,22 @@ import service3 from "../assets/service3.png";
 import service4 from "../assets/service4.png";
 import service5 from "../assets/service5.png";
 import service6 from "../assets/service6.png";
+import pet from "../assets/pet.png"
+import pet1 from "../assets/pet1.png"
+import pet2 from "../assets/pet2.png"
+import pet3 from "../assets/pet3.png"
+import pet4 from "../assets/pet4.png"
+import pet5 from "../assets/pet5.png"
+import pet6 from "../assets/pet6.png"
+import pet7 from "../assets/pet7.png"
+
 const linklst = [
   { id: 1, text: "home" },
 
   { id: 2, text: "about" },
   { id: 3, text: "services" },
   { id: 4, text: "breeds" },
-  { id: 6, text: "shop" },
+  { id: 5, text: "shop" },
   { id: 6, text: "gallery" },
 ];
 
@@ -71,4 +80,64 @@ const servicelst = [
     title: "Dog Matting",
   },
 ];
-export { linklst, slidelst, servicelst };
+
+const petlst = [
+  {
+    id: 1,
+    url: pet,
+    name: "Golden Retriever",
+    gender: "Male",
+    age: "2 months",
+  },
+  {
+    id: 2,
+    url: pet1,
+    name: "Doberman",
+    gender: "Male",
+    age: "2 months",
+  },
+  {
+    id: 3,
+    url: pet2,
+    name: "Apso",
+    gender: "Female",
+    age: "1 year",
+  },
+  {
+    id: 4,
+    url: pet3,
+    name: "Chihuahua",
+    gender: "FeMale",
+    age: "1 year",
+  },
+  {
+    id: 5,
+    url: pet4,
+    name: "Japanese Spitz",
+    gender: "Male",
+    age: "2 months",
+  },
+  {
+    id: 6,
+    url: pet5,
+    name: "German Shepard",
+    gender: "Male",
+    age: "2 months",
+  },
+  {
+    id: 7,
+    url: pet6,
+    name: "Husky",
+    gender: "Female",
+    age: "3 months",
+  },
+  {
+    id: 7,
+    url: pet7,
+    name: "Pug",
+    gender: "Female",
+    age: "4 months",
+  },
+
+];
+export { linklst, slidelst, servicelst, petlst };
