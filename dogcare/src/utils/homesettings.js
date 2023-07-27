@@ -13,6 +13,9 @@ import pet4 from "../assets/pet4.png"
 import pet5 from "../assets/pet5.png"
 import pet6 from "../assets/pet6.png"
 import pet7 from "../assets/pet7.png"
+import blog1 from "../assets/blog1.png"
+import blog2 from "../assets/blog2.png"
+import blog3 from "../assets/blog3.png"
 
 const linklst = [
   { id: 1, text: "home" },
@@ -132,7 +135,7 @@ const petlst = [
     age: "3 months",
   },
   {
-    id: 7,
+    id: 8,
     url: pet7,
     name: "Pug",
     gender: "Female",
@@ -140,4 +143,25 @@ const petlst = [
   },
 
 ];
-export { linklst, slidelst, servicelst, petlst };
+
+const bloglst = [
+  {
+    id: 1,
+    url: blog1,
+    title: "How to Choose the Right Bully Stick for Your Dog",
+    desc: "Below is an excerpt of porch.com article “ Moving with Pets? We have the Experts advice to do it Properly.",
+  },
+  {
+    id: 2,
+    url: blog2,
+    title: "Saving Lives: Animal House Shelter And Downtown Pet Supply",
+    desc: "Below is an excerpt of porch.com article “ Moving with Pets? We have the Experts advice to do it Properly.",
+  },
+  {
+    id: 3,
+    url: blog3,
+    title: "Himalayan Yak Chews: 11 Benefits You Need To Know",
+    desc: "Below is an excerpt of porch.com article “ Moving with Pets? We have the Experts advice to do it Properly.",
+  },
+];
+export { linklst, slidelst, servicelst, petlst,bloglst };

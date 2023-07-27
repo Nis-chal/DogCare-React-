@@ -21,22 +21,24 @@ const SearchInput = ({ show, toggleSearch }) => {
       <div
         className={
           show
-            ? "flex align-middle justify-center"
-            : "search-icon  bg-[#007fff] rounded-[50px] flex align-middle justify-center p-[2px]  "
+            ? "flex items-center justify-center "
+            : "search-icon  bg-[#007fff] rounded-[50px] flex items-center justify-center p-[1px] w-[30px] h-[30px]  "
         }
         onClick={toggleSearch}
       >
         <ImCross
           className={
-            show ? "flex lg:hidden cursor-pointer " : "hidden lg:hidden"
+            show
+              ? "flex lg:hidden cursor-pointer "
+              : "hidden lg:hidden cursor-pointer"
           }
         />
 
         <BiSearchAlt2
           className={
             show
-              ? "text-white w-[35px] h-[35px] p-[7px] hidden lg:flex cursor-pointer"
-              : "text-white w-[35px] h-[35px] p-[7px]  lg:flex"
+              ? "text-white w-[35px] h-[35px] p-[7px] hidden lg:flex cursor-pointer text-[20px] sm:text-[25px] "
+              : "text-white cursor-pointer w-[35px] h-[35px] p-[7px]  lg:flex text-[20px] sm:text-[25px] "
           }
         />
       </div>

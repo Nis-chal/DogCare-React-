@@ -19,12 +19,12 @@ const Navbar = () => {
     if (window.innerWidth < 1024) setSearch((prev) => !prev);
   };
   return (
-    <nav className="relative lg:static min-h-[10vh]">
+    <nav className="relative lg:static min-h-[10vh] px-[2%] sm:px-[5%] ">
       <div
         className={
           showSearch
             ? "hidden lg:flex lg:items-center lg:gap-[2%]   lg:font-[600] lg:text-[30px] cursor-pointer  group "
-            : "nav-heading cursor-pointer group"
+            : "nav-heading cursor-pointer group text-[clamp(20px,15px_+_4vw,25px)]  lg:text-[30px]"
         }
       >
         <FaPaw className="font-bold paw-icon group-hover:text-[var(--blue-500)]" />
@@ -69,9 +69,9 @@ const Navbar = () => {
           <SearchInput show={showSearch} toggleSearch={toggleSearch} />
         </div>
         <div className=" nav-options ">
-          <AiFillHeart className="heart-icon" />
-          <div className="nav-cart relative flex flex-row items-center   xl:pr-[22.15625px] xl:pt-[16px] xl:pb-[17px] xl:pl-[22px] lg:rounded-[8px]  xl:border-[1px] xl:border-[#007fff] xl:border-solid xl:gap-[11.421875px] xl:rounded-[8px]">
-            <HiShoppingCart className="icon" />
+          <AiFillHeart className="heart-icon text-[20px] sm:text-[25px] text-[var(--blue-500)] cursor-pointer " />
+          <div className="nav-cart cursor-pointer relative flex flex-row items-center   xl:pr-[22.15625px] xl:pt-[16px] xl:pb-[17px] xl:pl-[22px] lg:rounded-[8px]  xl:border-[1px] xl:border-[#007fff] xl:border-solid xl:gap-[11.421875px] xl:rounded-[8px]">
+            <HiShoppingCart className="text-[20px] sm:text-[25px] text-[var(--blue-500)]" />
             <span className=" xl:after:content-['items'] xl:after:ms-2 xl:static xl:text-[1rem] xl:w-min xl:h-min xl:bg-transparent xl:top-0 absolute top-[-15px] right-[-2px] text-[9px] h-[15px] w-[15px] bg-red-500 flex flex-row items-center justify-center rounded-[50px] text-white xl:text-black  xl:translate-y-0 ">
               2
             </span>
@@ -80,15 +80,15 @@ const Navbar = () => {
         <div
           className={
             dropdown
-              ? "hamburger lg:hidden flex cursor-pointer  "
-              : "hamburger  lg:hidden cursor-pointer"
+              ? "hamburger lg:hidden flex cursor-pointer  text-[var(--blue-500)] w-[30px] h-[30px] flex-row "
+              : "hamburger  lg:hidden cursor-pointer  text-[var(--blue-500)]  w-[30px] h-[30px] flex-row items-center justify-center"
           }
           onClick={toggleDoprDown}
         >
           {dropdown ? (
-            <ImCross className="fa-bars" />
+            <ImCross className="fa-bars text-[20px] sm:text-[25px]" />
           ) : (
-            <GiHamburgerMenu className="fa-bars" />
+            <GiHamburgerMenu className="fa-bars text-[20px] sm:text-[25px]" />
           )}
         </div>
       </div>

@@ -14,12 +14,16 @@
 }
 
 #root {
+  --white-1000: #f5fafa;
   --blue-100: #f5fafa;
   --blue-500: #007fff;
   --blue-1000: #17224d;
+  --black-1000: #000000;
+  --black-500: #666666;
   --dark-500: #292929;
   --dark-100: #515151;
   --border-color: #d4d2e3;
+  --orange-500: #ff960c;
 }
 
 .Nunito-font {
@@ -53,7 +57,6 @@ img {
 nav {
   display: flex;
   align-items: center;
-  padding-inline: 5%;
 
   gap: 5%;
   padding-block: 1%;
@@ -87,7 +90,6 @@ nav {
   align-items: center;
   gap: 2%;
   font-weight: 600;
-  font-size: 30px;
 }
 
 .nav-search {
@@ -126,11 +128,6 @@ input:focus {
   gap: 2%;
 }
 
-.heart-icon {
-  color: var(--blue-500);
-  font-size: 25px;
-}
-
 .nav-cart > .icon {
   font-size: 25px;
   color: var(--blue-500);
@@ -142,11 +139,10 @@ input:focus {
 
 .hamburger {
   color: white;
-  gap: 20px;
-  align-items: center;
+
   margin-right: 10px;
   background: #f85a40;
-  padding: 0.5em;
+  padding: 0.3em 0.4em 0.6em 0.3em;
 }
 .hamburger > .fa-bars {
   color: #fff;

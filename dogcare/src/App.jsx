@@ -6,7 +6,8 @@ import vector from "./assets/Vector.png";
 import vector1 from "./assets/Vector1.png";
 import tick from "./assets/tick.png";
 import { IoIosArrowForward } from "react-icons/io";
-import { servicelst, petlst } from "./utils/homesettings";
+import { servicelst, petlst, bloglst } from "./utils/homesettings";
+import specdog from "./assets/specdog.png";
 function App() {
   return (
     <>
@@ -103,7 +104,7 @@ function App() {
         </div>
       </section>
 
-      {/* <section className="p-[5%]    flex flex-col gap-7 h-[170vh] justify-center ">
+      <section className="p-[5%]    flex flex-col gap-7  justify-center ">
         <h1 className="Nunito-font font-[800] text-[45px] text-[var(--blue-1000)] text-center  ">
           Our Services
         </h1>
@@ -113,7 +114,7 @@ function App() {
           of pet owners and ensure the health and happiness of their furry
           friends.
         </p>
-        <div className="grid  grid-cols-[repeat(2,1fr)] md:grid-cols-3 gap-[2%] lg:gap-[5%]   lg:px-[5%] w-full grid- ">
+        <div className="grid  grid-cols-[repeat(2,1fr)] md:grid-cols-3  lg:gap-[5%]   lg:px-[5%] w-full gap-y-[20px] gap-x-[5%] ">
           {servicelst.map((item) => {
             return (
               <div
@@ -144,7 +145,7 @@ function App() {
             );
           })}
         </div>
-      </section> */}
+      </section>
 
       <section
         id="pet-collection"
@@ -158,7 +159,7 @@ function App() {
           selection."
         </p>
 
-        <div className="grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(1,1fr)] md:grid-cols-3 lg:grid-cols-4 gap-[5%] ">
+        <div className="grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(1,1fr)] md:grid-cols-3 lg:grid-cols-4 gap-y-[20px] gap-x-[5%] ">
           {petlst.map((item) => {
             return (
               <div
@@ -183,7 +184,73 @@ function App() {
                     <p className="Nunito-font font-[400] text-[12px]">
                       Age : <strong>{item.age}</strong>
                     </p>
+                  </div>
                 </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="flex flex-row justify-center">
+          <button className="flex flex-row p-2 lg:w-[160px] gap-[15%]  justify-center w-[calc(140px_+_5%)] whitespace-nowrap  text-white  rounded-[25px]  bg-[var(--blue-500)] items-center">
+            <span className="ms-auto">View All</span>
+            <div className="w-[30px] aspect-[1/1] rounded-[50px] bg-white flex flex-row justify-center items-center ">
+              <IoIosArrowForward className=" text-[var(--blue-500)]" />
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <section className="h-[40vh] overflow-hidden rounded-[20px] bg-black  mx-[2%] relative ">
+        <div className="w-full h-full">
+          <img
+            src={specdog}
+            alt=""
+            className="w-100 h-100 object-cover object-right"
+          />
+        </div>
+
+        <div className="find-info absolute top-[20%] left-[5%] text-[var(--white-1000)] flex flex-col gap-4">
+          <p className="Nunito-font font-[600] text-[clamp(14px,12px_+_1vw,20px)] lg:text-[20px] ">
+            One More Friend Thousands More Fun!
+          </p>
+          <p className="Nunito-font font-[900] text-[clamp(14px,12px_+_2vw,30px)] lg:text-[34px] ">
+            "Find your furry soulmate at Our Pet Shop."
+          </p>
+          <button className="flex flex-row p-2 lg:w-[160px] gap-[15%]  justify-center w-[calc(140px_+_5%)] whitespace-nowrap  text-[var(--orange-500)]  rounded-[25px]  bg-[var(--white-1000)] items-center">
+            <span className="ms-auto">View All</span>
+            <div className="w-[30px] aspect-[1/1] rounded-[50px] bg-[var(--orange-500)] flex flex-row justify-center items-center ">
+              <IoIosArrowForward className=" text-[var(--white-1000)]" />
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <section className="px-[5%]  flex flex-col gap-7 py-20">
+        <h1 className="Nunito-font font-[800] text-[45px] text-[var(--blue-1000)] text-center  ">
+          Our Blogs
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[5%] gap-y-7">
+          {bloglst.map((item) => {
+            return (
+              <div key={item.id} className="blog-card">
+                <div className="w-full aspect-[1/0.65] rounded-xl overflow-hidden">
+                  <img
+                    src={item.url}
+                    alt=""
+                    className="w-100 h-100 object-cover"
+                  />
+                </div>
+                <div className="blog-info flex flex-col gap-3 py-2">
+                  <h1 className="Nunito-font lg:text-[18px] text-[16px] font-extrabold ">
+                    {item.title}
+                  </h1>
+                  <p className="text-[var(--black-500)] text-[14px]">
+                    {item.desc}
+                  </p>
+                  <button className="bg-[var(--blue-1000)] text-[var(--white-1000)] p-2 rounded-sm w-max">
+                    View Details
+                  </button>
                 </div>
               </div>
             );
