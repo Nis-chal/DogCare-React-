@@ -6,6 +6,7 @@ import vector from "./assets/Vector.png";
 import vector1 from "./assets/Vector1.png";
 import tick from "./assets/tick.png";
 import { IoIosArrowForward } from "react-icons/io";
+import { servicelst } from "./utils/homesettings";
 function App() {
   return (
     <>
@@ -99,6 +100,49 @@ function App() {
               <IoIosArrowForward className=" text-[var(--blue-500)]" />
             </div>
           </button>
+        </div>
+      </section>
+
+      <section className="p-[5%]    flex flex-col gap-7 h-[170vh] justify-center ">
+        <h1 className="Nunito-font font-[800] text-[45px] text-[var(--blue-1000)] text-center  ">
+          Our Services
+        </h1>
+        <p className="Nunito-font font-[500] text-[clamp(14px_,11px_+_1vw,_22px)] text-center  lg:text-[clamp(14px_,13px_+_5vw,_26px)] md:leading-8  ">
+          We provide a wide range of products & services for pets such as food,
+          toys, grooming supplies, and veterinary care. We aim to meet the needs
+          of pet owners and ensure the health and happiness of their furry
+          friends.
+        </p>
+        <div className="grid  grid-cols-[repeat(2,1fr)] md:grid-cols-3 gap-[2%] lg:gap-[5%]   lg:px-[5%] w-full grid- ">
+          {servicelst.map((item) => {
+            return (
+              <div
+                className="aspect-[1/1.4] lg:aspect-[1/1.2]  border-[var(--border-color)] border-[1px] border-solid rounded-lg  flex flex-col w-full "
+                key={item?.id}
+              >
+                <div className=" aspect-[1/0.5] w-full">
+                  <img
+                    src={item?.url}
+                    alt=""
+                    className="w-full  object-cover"
+                  />
+                </div>
+                <div className="p-[5%]   flex flex-col justify-between flex-1 ">
+                  <h2 className="Nunito-font text-[14px] lg:text-[20px] font-[800] text-[var(--blue-1000)] line-clamp-1 ">
+                    {item?.title}
+                  </h2>
+                  <p className="text-[12px] md:text-[16px] Nunito-font font-[500] text-[var(--dark-100)] line-clamp-2 lg:line-clamp-4 ">
+                    {item?.desc}
+                  </p>
+                  <div className="flex flex-row justify-center justify-self-end mt-auto  ">
+                    <button className="mx-auto bg-[var(--blue-1000)] text-[14px] text-white rounded-md p-[2%] w-[60%] lg:w-[35%] py-2  lg:py-3 inter-font font-[500] ">
+                      view more
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 

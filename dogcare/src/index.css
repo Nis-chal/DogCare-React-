@@ -19,6 +19,7 @@
   --blue-1000: #17224d;
   --dark-500: #292929;
   --dark-100: #515151;
+  --border-color: #d4d2e3;
 }
 
 .Nunito-font {
@@ -59,9 +60,8 @@ nav {
   justify-content: space-between;
 }
 
-.box{
+.box {
   padding-inline: 5%;
-
 }
 
 .nav-links {
