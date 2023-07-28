@@ -147,7 +147,7 @@ function App() {
         </div>
       </section>
 
-      <section
+    <section
         id="pet-collection"
         className="p-[5%]    flex flex-col gap-7 h-max justify-center "
       >

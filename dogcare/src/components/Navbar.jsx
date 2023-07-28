@@ -28,7 +28,7 @@ const Navbar = () => {
         }
       >
         <FaPaw className="font-bold paw-icon group-hover:text-[var(--blue-500)]" />
-        <h1 className=" whitespace-nowrap Nunito-font font-bold ">Dog Care</h1>
+        <h1 className=" whitespace-nowrap Nunito-font font-bold ">Pet Care</h1>
       </div>
       <div
         className={

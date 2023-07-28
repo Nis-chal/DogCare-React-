@@ -1,11 +1,12 @@
 import React from "react";
-import { FaPaw } from "react-icons/fa";
+import { FaPaw, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { linklst } from "../utils/homesettings";
 import footer1 from "../assets/container.png";
 import footer2 from "../assets/container1.png";
 import footer3 from "../assets/container2.png";
 import footer4 from "../assets/container3.png";
 import { BiLogoFacebook } from "react-icons/bi";
+import {RiInstagramFill} from "react-icons/ri"
 
 const Footer = () => {
   return (
@@ -69,16 +70,16 @@ const Footer = () => {
               <BiLogoFacebook />
             </div>
             <div className="bg-white p-2 text-black rounded-md ">
-              <BiLogoFacebook />
+              <FaTwitter />
             </div>
             <div className="bg-white p-2 text-black rounded-md ">
-              <BiLogoFacebook />
+              <RiInstagramFill />
             </div>
             <div className="bg-white p-2 text-black rounded-md ">
-              <BiLogoFacebook />
+              <FaLinkedinIn />
             </div>
             <div className="bg-white p-2 text-black rounded-md ">
-              <BiLogoFacebook />
+              <FaYoutube />
             </div>
           </div>
         </div>
